@@ -1,214 +1,119 @@
-<html lang="ar"><head>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شروط الاستخدام - الشفا</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+    <title>الشروط - الشفا</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Rubik', sans-serif;
             background: #eee;
-            color: #2d2d2d;
             margin: 0;
-            padding: 0;
         }
+
         main {
             max-width: 800px;
-            margin: 0 auto;
+            margin: auto;
             padding: 20px;
         }
+
         header {
-            border-bottom: 1px solid #fff;
-            text-align: center;
-            margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
         }
-        .name {
-            font-weight: 600;
-            color: #000;
-        }
+
         .part {
-            margin: 20px 0;
-            border-radius: 20px;
+            background: #fff;
             padding: 20px;
-            background-color: #fff;
+            border-radius: 20px;
+            margin: 20px 0;
         }
-        h1, h2 {
-            color: #333;
-        }
+
+        .rtl { direction: rtl; text-align: right; }
+        .ltr { direction: ltr; text-align: left; }
+
         button {
-            background-color: #007BFF;
-            color: white;
+            padding: 8px 12px;
             border: none;
-            padding: 10px 15px;
+            background: #007bff;
+            color: white;
             border-radius: 5px;
             cursor: pointer;
         }
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Styles for RTL */
-        .rtl {
-            direction: rtl;
-            text-align: right;
-        }
-
-        /* Styles for LTR */
-        .ltr {
-            direction: ltr;
-            text-align: left;
-        }
     </style>
-<style type="text/css">.fc-ab-root { display: none !important } body > div.fc-ab-root { display: none !important } .fbs-auth__container.fbs-auth__adblock { display: none !important } .overlay-34_Kj { display: none !important } .wrapper-3AzfF { display: none !important } .fEy1Z2XT { display: none !important } .nytc---modal-window---windowContainer.nytc---modal-window---isShown.nytc---shared---blackBG { display: none !important } .tp-modal { display: none !important } .tp-backdrop.tp-active { display: none !important } .c-nudge__container.c-gate__container { display: none !important } .c-nudge__container.c-regGate__container { display: none !important } .css-n7r8pg { display: none !important } .css-1bd8bfl { display: none !important } .overlay__59af11e2 { display: none !important } .tp_modal { display: none !important } .tp-backdrop.tp-active { display: none !important } div[class^='sp_message_container'] { display: none !important } div[class^='sp_veil'] { display: none !important } </style></head>
-<body class="ltr">
-    <main>
-        <header>
-            <h2><span class="name">الشفا</span></h2>
-            <button id="toggle-language-btn">العربية</button>
-        </header>
-        
-        <div id="content">
-                <div class="part">
-                    <h1>Terms of Use</h1>
-                    <p>
-                        Thank you for using <span class="name">Alshafa</span>. This page explains the Terms of Use for the app, noting that the app does not collect any personal data.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>Privacy Policy</h2>
-                    <p>
-                        The <span class="name">Alshafa</span> app ensures user privacy. The app does not collect or store any personal or identifiable information about the user.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>Using the App</h2>
-                    <p>
-                        The <span class="name">Alshafa</span> app is provided as a source of information about various tourist destinations. Using the app for any illegal or abusive purposes is prohibited.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>Changes to Terms of Use</h2>
-                    <p>
-                        The <span class="name">Alshafa</span> app reserves the right to modify or update the Terms of Use at any time. Any changes will be posted on this page.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>Contact Us</h2>
-                    <p>
-                        If you have any questions about the Terms of Use, you can contact us at codeb.jed@icloud.com.
-                    </p>
-                    <p>
-                        Last updated: 2024
-                    </p>
-                </div>
-            </div>
-    </main>
+</head>
 
-    <script>
-        // Language configuration
-        const langQuery = new URLSearchParams(window.location.search).get("lang");
-        const supportedLanguages = ["en", "ar"];
-        const lang = supportedLanguages.includes(langQuery) ? langQuery : "ar"; // Default to Arabic
+<body>
+<main>
 
-        // Elements
-        const contentDiv = document.getElementById("content");
-        const toggleLanguageBtn = document.getElementById("toggle-language-btn");
+<header>
+    <h2>الشفا</h2>
+    <button id="toggle">EN</button>
+</header>
 
-        // Terms of Use content in both languages
-        const termsOfUse = {
-            en: `
-                <div class="part">
-                    <h1>Terms of Use</h1>
-                    <p>
-                        Thank you for using <span class="name">Alshafa</span>. This page explains the Terms of Use for the app, noting that the app does not collect any personal data.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>Privacy Policy</h2>
-                    <p>
-                        The <span class="name">Alshafa</span> app ensures user privacy. The app does not collect or store any personal or identifiable information about the user.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>Using the App</h2>
-                    <p>
-                        The <span class="name">Alshafa</span> app is provided as a source of information about various tourist destinations. Using the app for any illegal or abusive purposes is prohibited.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>Changes to Terms of Use</h2>
-                    <p>
-                        The <span class="name">Alshafa</span> app reserves the right to modify or update the Terms of Use at any time. Any changes will be posted on this page.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>Contact Us</h2>
-                    <p>
-                        If you have any questions about the Terms of Use, you can contact us at codeb.jed@icloud.com.
-                    </p>
-                    <p>
-                        Last updated: 2024
-                    </p>
-                </div>
-            `,
-            ar: `
-                <div class="part">
-                    <h1>شروط الاستخدام</h1>
-                    <p>
-                        شكراً لاستخدامكم تطبيق <span class="name">الشفا</span>. هذه الصفحة توضح شروط الاستخدام للتطبيق، علماً بأن التطبيق لا يقوم بجمع أي بيانات شخصية.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>سياسة الخصوصية</h2>
-                    <p>
-                        تطبيق <span class="name">الشفا</span> يضمن الحفاظ على خصوصية المستخدمين. التطبيق لا يجمع أو يخزن أي بيانات شخصية أو معلومات تعريفية عن المستخدم.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>استخدام التطبيق</h2>
-                    <p>
-                        يتم تقديم تطبيق <span class="name">الشفا</span> كمصدر معلوماتي حول الوجهات السياحية المختلفة. يُمنع استخدام التطبيق لأي أغراض غير قانونية أو مسيئة.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>تغييرات على شروط الاستخدام</h2>
-                    <p>
-                        يحتفظ تطبيق <span class="name">الشفا</span> بالحق في تعديل أو تحديث شروط الاستخدام في أي وقت. سيتم نشر أي تغييرات على هذه الصفحة.
-                    </p>
-                </div>
-                <div class="part">
-                    <h2>تواصل معنا</h2>
-                    <p>
-                        إذا كانت لديكم أي أسئلة حول شروط الاستخدام، يمكنكم التواصل معنا عبر البريد الإلكتروني: codeb.jed@icloud.com
-                    </p>
-                    <p>
-                        آخر تحديث: 2024
-                    </p>
-                </div>
-            `
-        };
+<div id="content"></div>
 
-        // Function to update content and button text based on language
-        function updateContent(language) {
-            contentDiv.innerHTML = termsOfUse[language] || termsOfUse["ar"];
-            toggleLanguageBtn.textContent = language === "ar" ? "English" : "العربية";
-            document.body.className = language === "ar" ? "rtl" : "ltr";
-        }
+</main>
 
-        // Toggle language button functionality
-        toggleLanguageBtn.addEventListener("click", () => {
-            const newLang = lang === "ar" ? "en" : "ar";
-            window.location.search = `?lang=${newLang}`;
-        });
+<script>
+const params = new URLSearchParams(window.location.search);
+const lang = params.get("lang") === "en" ? "en" : "ar";
+const mode = params.get("mode");
 
-        // Initial content load
-        updateContent(lang);
-    </script>
+const content = {
+    ar: `
+        <div class="part">
+            <h1>شروط الاستخدام</h1>
+            <p>تطبيق الشفا لا يجمع أي بيانات شخصية.</p>
+        </div>
+    `,
+    en: `
+        <div class="part">
+            <h1>Terms of Use</h1>
+            <p>The app does not collect personal data.</p>
+        </div>
+    `,
 
+    delete_ar: `
+        <div class="part">
+            <h1>حذف الحساب</h1>
+            <p>لحذف حسابك يرجى إرسال بريد إلى:</p>
+            <p><b>codeb.jed@icloud.com</b></p>
+        </div>
+    `,
+    delete_en: `
+        <div class="part">
+            <h1>Delete Account</h1>
+            <p>To delete your account, send an email to:</p>
+            <p><b>codeb.jed@icloud.com</b></p>
+        </div>
+    `
+};
 
-</body></html>
+function render() {
+    let key;
+
+    if (mode === "delete") {
+        key = "delete_" + lang;
+    } else {
+        key = lang;
+    }
+
+    document.getElementById("content").innerHTML = content[key];
+    document.body.className = lang === "ar" ? "rtl" : "ltr";
+}
+
+document.getElementById("toggle").onclick = () => {
+    const newLang = lang === "ar" ? "en" : "ar";
+    window.location.search = `?lang=${newLang}${mode ? "&mode=" + mode : ""}`;
+};
+
+render();
+</script>
+
+</body>
+</html>
