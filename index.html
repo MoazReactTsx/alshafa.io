@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الشروط - الشفا</title>
+    <title>Privacy Policy - Al Shifa</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 
@@ -12,11 +12,13 @@
             font-family: 'Rubik', sans-serif;
             background: #eee;
             margin: 0;
+            color: #222;
+            line-height: 1.6;
         }
 
         main {
-            max-width: 800px;
-            margin: auto;
+            max-width: 900px;
+            margin: 30px auto;
             padding: 20px;
         }
 
@@ -29,9 +31,12 @@
         .part {
             background: #fff;
             padding: 20px;
-            border-radius: 20px;
-            margin: 20px 0;
+            border-radius: 12px;
+            margin: 18px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
         }
+
+        h1,h2,h3 { margin: 0 0 10px 0 }
 
         .rtl { direction: rtl; text-align: right; }
         .ltr { direction: ltr; text-align: left; }
@@ -41,7 +46,7 @@
             border: none;
             background: #007bff;
             color: white;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
         }
     </style>
@@ -51,7 +56,7 @@
 <main>
 
 <header>
-    <h2>الشفا</h2>
+    <h2>Al Shifa</h2>
     <button id="toggle">EN</button>
 </header>
 
@@ -62,54 +67,96 @@
 <script>
 const params = new URLSearchParams(window.location.search);
 const lang = params.get("lang") === "en" ? "en" : "ar";
-const mode = params.get("mode");
 
 const content = {
-    ar: `
-        <div class="part">
-            <h1>شروط الاستخدام</h1>
-            <p>تطبيق الشفا لا يجمع أي بيانات شخصية.</p>
-        </div>
-    `,
-    en: `
-        <div class="part">
-            <h1>Terms of Use</h1>
-            <p>The app does not collect personal data.</p>
-        </div>
-    `,
+ar: `
+<div class="part">
+<h1>سياسة الخصوصية</h1>
+<p>نحن في تطبيق الشفا نلتزم بحماية خصوصيتك. توضح هذه السياسة كيفية جمع واستخدام بياناتك.</p>
 
-    delete_ar: `
-        <div class="part">
-            <h1>حذف الحساب</h1>
-            <p>لحذف حسابك يرجى إرسال بريد إلى:</p>
-            <p><b>codeb.jed@icloud.com</b></p>
-        </div>
-    `,
-    delete_en: `
-        <div class="part">
-            <h1>Delete Account</h1>
-            <p>To delete your account, send an email to:</p>
-            <p><b>codeb.jed@icloud.com</b></p>
-        </div>
-    `
+<h3>البيانات التي نجمعها</h3>
+<ul>
+<li>الاسم</li>
+<li>رقم الهاتف</li>
+<li>البريد الإلكتروني</li>
+<li>بيانات تقنية (مثل نوع الجهاز ونظام التشغيل وعنوان IP)</li>
+</ul>
+
+<h3>كيف نستخدم البيانات</h3>
+<ul>
+<li>إنشاء وإدارة الحساب</li>
+<li>تقديم خدمات التطبيق</li>
+<li>التواصل مع المستخدم</li>
+<li>تحسين الأداء والتجربة</li>
+</ul>
+
+<h3>الدفع الإلكتروني</h3>
+<p>يتم الدفع من خلال Stripe بشكل آمن. نحن لا نقوم بتخزين بيانات البطاقة على خوادمنا.</p>
+
+<h3>مشاركة البيانات</h3>
+<p>لا نقوم ببيع بياناتك. قد يتم مشاركة بعض البيانات مع خدمات خارجية مثل Stripe أو Firebase لتشغيل التطبيق.</p>
+
+<h3>حماية البيانات</h3>
+<p>نستخدم إجراءات أمان لحماية بياناتك من الوصول غير المصرح به.</p>
+
+<h3>حذف الحساب</h3>
+<p>يمكنك طلب حذف حسابك عبر البريد:</p>
+<p><b>codeb.jed@icloud.com</b></p>
+
+<h3>التغييرات</h3>
+<p>قد نقوم بتحديث هذه السياسة من وقت لآخر.</p>
+</div>
+`,
+
+en: `
+<div class="part">
+<h1>Privacy Policy</h1>
+<p>At Al Shifa, we are committed to protecting your privacy.</p>
+
+<h3>Data We Collect</h3>
+<ul>
+<li>Name</li>
+<li>Phone number</li>
+<li>Email address</li>
+<li>Technical data (device, OS, IP)</li>
+</ul>
+
+<h3>How We Use Data</h3>
+<ul>
+<li>Account management</li>
+<li>Providing services</li>
+<li>User communication</li>
+<li>Improving performance</li>
+</ul>
+
+<h3>Payments</h3>
+<p>Payments are processed securely via Stripe. We do not store card data.</p>
+
+<h3>Data Sharing</h3>
+<p>We do not sell your data. Some data may be shared with services like Stripe or Firebase.</p>
+
+<h3>Data Protection</h3>
+<p>We apply security measures to protect your data.</p>
+
+<h3>Account Deletion</h3>
+<p>Request deletion via:</p>
+<p><b>codeb.jed@icloud.com</b></p>
+
+<h3>Changes</h3>
+<p>We may update this policy over time.</p>
+</div>
+`
 };
 
 function render() {
-    let key;
-
-    if (mode === "delete") {
-        key = "delete_" + lang;
-    } else {
-        key = lang;
-    }
-
-    document.getElementById("content").innerHTML = content[key];
+    document.getElementById("content").innerHTML = content[lang];
     document.body.className = lang === "ar" ? "rtl" : "ltr";
+    document.getElementById("toggle").textContent = lang === "ar" ? "EN" : "AR";
 }
 
 document.getElementById("toggle").onclick = () => {
     const newLang = lang === "ar" ? "en" : "ar";
-    window.location.search = `?lang=${newLang}${mode ? "&mode=" + mode : ""}`;
+    window.location.search = "?lang=" + newLang;
 };
 
 render();
