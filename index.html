@@ -56,7 +56,7 @@
 <main>
 
 <header>
-    <h2>Al Shafa</h2>
+    <h2>الشفا</h2>
     <button id="toggle">EN</button>
 </header>
 
@@ -70,7 +70,7 @@ const lang = params.get("lang") === "en" ? "en" : "ar";
 
 const content = {
 ar: `
-<div class="part">
+<div class="part rtl">
 <h1>سياسة الخصوصية</h1>
 <p>نحن في تطبيق الشفا نلتزم بحماية خصوصيتك. توضح هذه السياسة كيفية جمع واستخدام بياناتك.</p>
 
@@ -84,19 +84,21 @@ ar: `
 <h3>كيف نستخدم البيانات</h3>
 <ul>
 <li>إنشاء وإدارة الحساب</li>
-<li>تقديم خدمات التطبيق</li>
+<li>تقديم خدمات الحجز والطلبات</li>
+<li>إرسال الإشعارات المتعلقة بحالة الحجز والطلبات</li>
 <li>التواصل مع المستخدم</li>
 <li>تحسين الأداء والتجربة</li>
 </ul>
 
 <h3>الدفع الإلكتروني</h3>
-<p>يتم الدفع من خلال Stripe بشكل آمن. نحن لا نقوم بتخزين بيانات البطاقة على خوادمنا.</p>
+<p>يتم معالجة المدفوعات بشكل آمن عبر بوابة <b>EdfaPay</b>. نحن لا نقوم بتخزين بيانات البطاقة المصرفية على خوادمنا.</p>
 
 <h3>حماية البيانات</h3>
 <p>نستخدم إجراءات أمان لحماية بياناتك من الوصول غير المصرح به.</p>
 
 <h3>حذف الحساب</h3>
-<p>يمكنك طلب حذف حسابك عبر البريد:</p>
+<p>يمكنك طلب حذف حسابك مباشرةً من داخل التطبيق عبر صفحة الملف الشخصي. سيتم تعطيل الحساب فوراً وحذفه نهائياً خلال 90 يوماً.</p>
+<p>كما يمكنك التواصل معنا عبر البريد الإلكتروني:</p>
 <p><b>codeb.jed@icloud.com</b></p>
 
 <h3>التغييرات</h3>
@@ -105,9 +107,9 @@ ar: `
 `,
 
 en: `
-<div class="part">
+<div class="part ltr">
 <h1>Privacy Policy</h1>
-<p>At Al Shafa, we are committed to protecting your privacy.</p>
+<p>At Al Shafa, we are committed to protecting your privacy. This policy explains how we collect and use your data.</p>
 
 <h3>Data We Collect</h3>
 <ul>
@@ -118,21 +120,22 @@ en: `
 
 <h3>How We Use Data</h3>
 <ul>
-<li>Account management</li>
-<li>Providing services</li>
+<li>Account creation and management</li>
+<li>Providing booking and order services</li>
+<li>Sending notifications about booking and order status</li>
 <li>User communication</li>
-<li>Improving performance</li>
+<li>Improving performance and experience</li>
 </ul>
 
 <h3>Payments</h3>
-<p>Payments are processed securely via Stripe. We do not store card data.</p>
-
+<p>Payments are processed securely via <b>EdfaPay</b>. We do not store card data on our servers.</p>
 
 <h3>Data Protection</h3>
-<p>We apply security measures to protect your data.</p>
+<p>We apply security measures to protect your data from unauthorized access.</p>
 
 <h3>Account Deletion</h3>
-<p>Request deletion via:</p>
+<p>You can delete your account directly from within the app via the Profile page. Your account will be deactivated immediately and permanently deleted within 90 days.</p>
+<p>You may also contact us via email:</p>
 <p><b>codeb.jed@icloud.com</b></p>
 
 <h3>Changes</h3>
